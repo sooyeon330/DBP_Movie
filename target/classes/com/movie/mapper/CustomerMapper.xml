@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.movie.mapper.CustomerMapper">
+	<select id="getAllCustomers" resultType="com.movie.VO.CustomerVO">
+		SELECT * FROM customer
+	</select>	
+	<select id="getCustomer" resultType="com.movie.VO.CustomerVO" parameterType="String">
+		SELECT * FROM customer WHERE id = #{id}
+	</select>
+	<insert id="insertCustomer" parameterType="com.movie.VO.CustomerVO">
+		INSERT INTO customer (id,name,pw,tel,email)
+						VALUES (#{id},#{name},#{pw},#{tel},#{email})
+	</insert>
+</mapper>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.movie.mapper.EtcMapper">
+	<select id="getUser" resultType="String">
+		SELECT username FROM USER_USERS
+	</select>	
+	<select id="checkLogin" resultType="String">
+		SELECT id FROM customer WHERE id=#{id} and pw=#{pw}
+	</select>
+</mapper>

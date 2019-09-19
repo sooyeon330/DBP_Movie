@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.movie.mapper.MovieMapper">
+	<select id="getAllMovies" resultType="com.movie.VO.MovieVO">
+		SELECT id, title, grade, to_char(opendate,'YYYY-MM-DD') opendate,to_char(closedate,'YYYY-MM-DD') closedate FROM movie
+		order by opendate
+	</select>	
+	<select id="getMovie" resultType="com.movie.VO.MovieVO" parameterType="String">
+		SELECT * FROM movie WHERE id = #{id}
+	</select>	
+	<insert id="insertMovie" parameterType="com.movie.VO.MovieVO">
+		INSERT INTO movie (title, grade, opendate,closedate)
+						VALUES (#{title},#{grade},#{opendate},addDays(#{opendate},#{closedate}))
+	</insert>
+	<insert id="insertTicket" parameterType="com.movie.VO.TicketingVO">
+		INSERT INTO ticketing (ticketid, customer, viewdate, cinema, movie, adcnt, stcnt, price,tickettime)
+						VALUES (#{ticketid},#{customer},#{viewdate},2,#{movie},#{adcnt},#{stcnt},ticketpay(#{adcnt},#{stcnt}),sysdate)
+	</insert>
+	<delete id="deleteMovie" parameterType="String">
+		delete movie where id=#{id}
+	</delete>
+</mapper>

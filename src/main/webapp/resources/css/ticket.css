@@ -1,0 +1,109 @@
+
+select {
+  margin-bottom: 1em;
+  padding: .50em;
+  border: 0;
+  border-bottom: 2px solid currentcolor;
+  font-weight: bold;
+  letter-spacing: .15em;
+  border-radius: 0;
+}
+select:focus, select:active {
+  outline: 0;
+  border-bottom-color: red;
+}
+.relabel{
+	text-align:left;
+	width: 750px;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	padding-bottom:10px;
+}
+.Tlabel{
+	text-align:left;
+	color:#231f20;
+	border-bottom: 1px solid #231f20;
+	padding-bottom:10px;
+}
+.section{
+	background-color: #fefefe;
+	/* background-color: rgba(255, 255, 255, 0.2); */
+	border-radius: 20px;
+	width: 750px;
+	padding:20px;
+}
+.chButton {
+	margin-bottom:10px;
+	width:100px;
+	height:40px;
+	background-color: #16181c;
+	color:white;
+	border: 0;
+	cursor: pointer;
+}
+.chButton:hover{
+	background-color:#C791A7;
+}
+.movButton{
+	width:300px;
+	height:50px;
+	font-size:24;
+	border: 0;
+	background-color:white;
+	cursor: pointer;
+	text-align: left;
+}
+.movie_ul li{
+	list-style:none;
+	padding:10px;
+	background-color:white;
+	opacity: 0.9;
+}
+.movie_ul li:hover{
+	opacity: 1;
+}
+.movie_ul{
+	width:370px;
+	list-style: none;
+	margin:0;
+	overflow: auto;
+}
+
+.oldimg{
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+}
+#resutlDiv{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+#resultDiv th, #resultDiv td{
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+#resultDiv td {
+	text-align: left;
+}
+#resultDiv th{
+	background-color: #55608f;
+	text-align: left;
+}
+.result{
+	width: 150px;
+	height:70px;
+	background-color: rgba(255, 255, 255, 0.2);
+	text-align: center;
+	vertical-align: middle;
+}
+#Ticketing{
+	width:200px;
+	height:40px;
+	background-color: #16181c;
+	color:white;
+	border:0;
+	margin-bottom:100px;
+}
+#Ticketing:hover{
+	background-color:#C791A7;
+}

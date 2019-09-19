@@ -1,0 +1,31 @@
+.oldimg{
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	margin-right:10px;
+}
+
+.MovlistCon .limtbl {
+  width: 750px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.MovlistCon .limtbl th,
+.limtbl td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.MovlistCon .limtbl th {
+  text-align: left;
+}
+.MovlistCon .limtbl .litr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.MovlistCon .limtbl thead th {
+  background-color: #55608f;
+}
+.MovlistCon .limtbl .litd {
+  position: relative;
+}

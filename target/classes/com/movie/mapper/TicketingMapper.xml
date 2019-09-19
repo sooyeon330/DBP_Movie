@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.movie.mapper.TicketngMapper">
+	<select id="getTicket" resultType="com.movie.VO.TicketInfoVO" parameterType="String">
+		SELECT t.ticketid,t.customer, to_char(t.viewdate,'YYYY-MM-DD') viewdate, t.time, c.cinema, m.title movie, m.grade, t.adcnt,t.stcnt, t.price, t.tickettime
+		FROM ticketing t, cinema c, movie m
+		WHERE t.ticketid=#{ticketid} AND c.id=t.cinema AND m.id=t.movie
+	</select>
+	<delete id="deleteTicket"  parameterType="String" >
+		DELETE FROM ticketing WHERE ticketid = #{ticketid}
+	</delete>	
+	 
+</mapper>
+
+
+<!-- 
+***조인해서 예매정보 한글로 출력함
+이제 예매할때 숫자로 되는거 해결하고
+상영관 숫자 해결하고 
+상영시간ㅇ.,.,.,.,.어떡하지 -->
